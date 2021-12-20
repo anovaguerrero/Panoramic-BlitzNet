@@ -7,6 +7,10 @@ More info can be found in our [project page](https://webdiis.unizar.es/~jguerrer
 
 Our implementation is based on the previous work of Dvornik et al. [BlitzNet](https://arxiv.org/abs/1708.02813) which code can be found in their [webpage](https://github.com/dvornikita/blitznet)
 
+<p align="center">
+<img src='imgs/example.png' width=900>
+  </p>
+
 ## Use Instructions
 We recommend the use of a virtual enviroment for the use of this project. (*e.g.* [anaconda](https://www.anaconda.com/products/individual))
 ```bash
