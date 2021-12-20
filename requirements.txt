@@ -1,0 +1,10 @@
+tensorflow-gpu==2.3.0
+tensorboard==2.5.0
+tensorflow-gpu-estimator==2.3.0
+tensorflow-addons==0.12.1
+tensorflow-datasets==4.2.0
+matplotlib==3.3.4
+docopt==0.6.2
+numpy==1.18.5
+opencv-python==4.5.4.58
+pillow==8.2.0
