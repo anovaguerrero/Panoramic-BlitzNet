@@ -49,7 +49,6 @@ def build_bbox(x, y, w, h):
             xmax = (x + w) / image_width,
         )
 
-
 class Sun360(tfds.core.GeneratorBasedBuilder):
   """DatasetBuilder for sun360 dataset."""
 
@@ -84,13 +83,10 @@ class Sun360(tfds.core.GeneratorBasedBuilder):
 
   def _split_generators(self, dl_manager: tfds.download.DownloadManager):
     """Returns SplitGenerators."""
-    # TODO: Update dataset in the webpage and extract automatically from there
-    # path = dl_manager.download_and_extract('https://todo-data-url')
-
-    path = '/home/alejandro/PanoBlitznet/dataset/' # TODO: CHANGE THIS PATH
+    path = '/home/alejandro/PanoBlitznet/dataset/' # CHANGE THIS PATH
     
     return {
-        'train': self._generate_examples(path + 'train'), # Using strings
+        'train': self._generate_examples(path + 'train'),
         'test': self._generate_examples(path + 'test')
     }
 
@@ -102,7 +98,7 @@ class Sun360(tfds.core.GeneratorBasedBuilder):
     segmentation_folder = path + '/segmentation/'
 
     json_file = json.load(open(json_path,'r'))
-    # TODO(sun360): Yields (key, example) tuples from the dataset
+
     for i in json_file['images']:
         list_instances = [a for a in json_file['annotations'] if a['image_id'] == i['id']]
 
@@ -110,12 +106,12 @@ class Sun360(tfds.core.GeneratorBasedBuilder):
         rev_list_instances = [list_instances[ins] for ins in reversed(range(len(list_instances)))] 
         instances_len = len(list_instances) # Number of objects of each image to use below
 
-		# TODO For figuring out if an object has two bboxes, the object area and the object category of sucesive items in the list are compared. 
-    # If both are equal, then the object has two different bboxes to be stored in 'bboxes_list'. If not, then the unique bbox is stored adding 
-    # a (0.0, 0.0, 0.0, 0.0) vector to define that the object does not have a second bbox since it is necessary to pass a float values vector to the 
-    # tfds.feature.BBoxFeature(). To do this checking with every object in every image, rev_list_instances array is used for avoiding an error when 
-    # comparing the last list_instances array value with the next one that does not exist. Using this reversed list to get the next list_instances value 
-    # but in rev_list_instances, when comparing the list_instances['last_item'] it will be compared with rev_list_instances[0] so the error does not appear.
+	# For figuring out if an object has two bboxes, the object area and the object category of sucesive items in the list are compared. 
+    	# If both are equal, then the object has two different bboxes to be stored in 'bboxes_list'. If not, then the unique bbox is stored adding 
+    	# a (0.0, 0.0, 0.0, 0.0) vector to define that the object does not have a second bbox since it is necessary to pass a float values vector to the 
+    	# tfds.feature.BBoxFeature(). To do this checking with every object in every image, rev_list_instances array is used for avoiding an error when 
+    	# comparing the last list_instances array value with the next one that does not exist. Using this reversed list to get the next list_instances value 
+    	# but in rev_list_instances, when comparing the list_instances['last_item'] it will be compared with rev_list_instances[0] so the error does not appear.
 		
         record = {
             'image': rgb_folder + i['file_name'] + '.png',
