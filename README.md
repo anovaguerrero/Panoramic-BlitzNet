@@ -86,7 +86,7 @@ Loads a saved model and evaluates it.
 ```
 ## Contact
 - a.denova.guerrero@gmail.com (Alejandro de Nova Guerrero)
-- juliagviu@gmail.com (Julia Guerrero Viú)
+- juliagviu@unizar.es (Julia Guerrero Viu)
 - berenguel@unizar.es (Samuel Bruno Berenguel Baeta)
 - jguerrer@unizar.es (José Jesús Guerrero Campo)
 
