@@ -53,7 +53,7 @@ Do this  ONLY if it is the first time using this repository.
 
 Ensure the folder 'dataset' is in the same folder than the python files.
 
-Change the line 90 in sun360.py file with your path to the 'dataset' folder.
+Change the line 86 in sun360.py file with your path to the 'dataset' folder.
 ```bash 
 (envname)$ cd /path/to/project/folder
 ```
