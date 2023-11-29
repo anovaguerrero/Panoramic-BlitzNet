@@ -2,10 +2,10 @@
 Tensorflow 2.x implementation of Panoramic BlitzNet for object detection and semantic segmentation on indoor panoramic images.
 
 ## Introduction
-This repository contains an original implementation of the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9197335): 'What’s in my Room? Object Recognition on Indoor Panoramic Images' by Julia Guerrero-Viu, Clara Fernandez-Labrador, Cédric Demonceaux and José J. Guerrero.
+This repository contains a re-implementation of the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9197335): 'What’s in my Room? Object Recognition on Indoor Panoramic Images' by Julia Guerrero-Viu, Clara Fernandez-Labrador, Cédric Demonceaux and José J. Guerrero.
 More info can be found in our [project page](https://webdiis.unizar.es/~jguerrer/room_OR/)
 
-Our implementation is based on the previous work of Dvornik et al. [BlitzNet](https://arxiv.org/abs/1708.02813) which code can be found in their [webpage](https://github.com/dvornikita/blitznet)
+Our code is original but it is based on the previous work of Dvornik et al. [BlitzNet](https://arxiv.org/abs/1708.02813) which code can be found in their [webpage](https://github.com/dvornikita/blitznet)
 
 <p align="center">
 <img src='imgs/example.PNG' width=900>
