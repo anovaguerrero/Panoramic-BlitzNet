@@ -3,7 +3,7 @@ Tensorflow 2.x implementation of Panoramic BlitzNet for object detection and sem
 
 ## Introduction
 This repository contains a re-implementation of the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9197335): 'What’s in my Room? Object Recognition on Indoor Panoramic Images' by Julia Guerrero-Viu, Clara Fernandez-Labrador, Cédric Demonceaux and José J. Guerrero.
-More info can be found in our [project page](https://webdiis.unizar.es/~jguerrer/room_OR/)
+More info can be found in our [project page](https://webdiis.unizar.es/~jguerrer/room_OR/).
 
 Our code is original but it is based on the previous work of Dvornik et al. [BlitzNet](https://arxiv.org/abs/1708.02813) which code can be found in their [webpage](https://github.com/dvornikita/blitznet)
 
@@ -37,6 +37,7 @@ Copy the folder 'dataset' to the folder where you have the repository files.
 [download](https://drive.google.com/drive/u/2/folders/1qfTHTsm6vrZtRnTGaTbVZjXKWxMhBX53)
 
 Download the folder 'Checkpoints' which includes the model weights and copy it to the folder where you have the repository files.
+> **Disclaimer**: Please note that this is not the original model from the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9197335), as this is a re-implementation that does **not** include all the details and components of the original Panoramic BlitzNet (e.g., it uses standard convolutions, it is not pre-trained on the SUN-RGBD dataset...). Results using this checkpoint might significantly differ from the original ones reported in the paper.
 
 ### Test run
 Ensure the folders 'dataset' and 'Checkpoints' are in the same folder than the python files.
